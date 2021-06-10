@@ -9,7 +9,7 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [AndroidInjectionModule::class, ActivityBuildersModule::class, AppModule::class])
-public interface ApplicationComponent : AndroidInjector<BaseApplication> {
+interface ApplicationComponent : AndroidInjector<BaseApplication> {
 
     override fun inject(application: BaseApplication)
 
