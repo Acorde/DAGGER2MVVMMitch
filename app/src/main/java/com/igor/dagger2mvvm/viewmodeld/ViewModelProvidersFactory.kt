@@ -8,6 +8,9 @@ import javax.inject.Provider
 
 class ViewModelProvidersFactory @Inject constructor(private val creators: Map<Class<out ViewModel>, Provider<ViewModel>>) : ViewModelProvider.Factory {
 
+    companion object {
+        private const val TAG = "ViewModelProviderFactor"
+    }
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
 
@@ -37,7 +40,4 @@ class ViewModelProvidersFactory @Inject constructor(private val creators: Map<Cl
         }
     }
 
-    companion object {
-        private const val TAG = "ViewModelProviderFactor"
-    }
 }
