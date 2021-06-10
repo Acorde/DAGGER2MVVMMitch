@@ -8,7 +8,7 @@ import dagger.android.AndroidInjector
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AndroidInjectionModule::class, ActivityBuildersModule::class, AppModule::class])
+@Component(modules = [AndroidInjectionModule::class, ActivityBuildersModule::class, AppModule::class, ViewModelFactoryModule::class])
 interface ApplicationComponent : AndroidInjector<BaseApplication> {
 
     override fun inject(application: BaseApplication)
